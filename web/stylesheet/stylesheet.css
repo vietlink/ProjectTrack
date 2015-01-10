@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+.login-heading{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:26pt;
+	font-style:italic;
+}
+.error{
+	color:red;
+	}
+
