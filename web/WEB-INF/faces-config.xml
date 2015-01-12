@@ -14,5 +14,24 @@
                       <to-view-id>/login.jsp</to-view-id>
                   </navigation-case>
               </navigation-rule>
-              
+              <navigation-rule>
+                  <description>Navigation for the toolbar</description>
+                  <from-view-id>/*</from-view-id>
+                  <navigation-case>
+                      <from-outcome>inbox</from-outcome>
+                      <to-view-id>/inbox.jsp</to-view-id>
+                  </navigation-case>
+                  <navigation-case>
+                      <from-outcome>show_all</from-outcome>
+                      <to-view-id>/show_all.jsp</to-view-id>
+                  </navigation-case>
+                  <navigation-case>
+                      <from-outcome>create</from-outcome>
+                      <to-view-id>/create.jsp</to-view-id>
+                  </navigation-case>
+                  <navigation-case>
+                      <from-outcome>logout</from-outcome>
+                      <to-view-id>/login.jsp</to-view-id>
+                  </navigation-case>
+              </navigation-rule>
 </faces-config>
