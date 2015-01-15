@@ -34,4 +34,27 @@
                       <to-view-id>/login.jsp</to-view-id>
                   </navigation-case>
               </navigation-rule>
+              <navigation-rule>
+                  <from-view-id>/inbox.jsp</from-view-id>
+                  <navigation-case>
+                      <from-outcome>details</from-outcome>
+                      <to-view-id>/detail.jsp</to-view-id>
+                  </navigation-case>
+                  <navigation-case>
+                      <from-outcome>approve</from-outcome>
+                      <to-view-id>/approve.jsp</to-view-id>
+                  </navigation-case>
+                  <navigation-case>
+                      <from-outcome>reject</from-outcome>
+                      <to-view-id>/reject.jsp</to-view-id>
+                  </navigation-case>
+                  
+              </navigation-rule>
+              <navigation-rule>
+                  <from-view-id>/show_all.jsp</from-view-id>
+                  <navigation-case>
+                      <from-outcome>details</from-outcome>
+                      <to-view-id>/details.jsp</to-view-id>
+                  </navigation-case>
+              </navigation-rule>
 </faces-config>
