@@ -57,4 +57,29 @@
                       <to-view-id>/details.jsp</to-view-id>
                   </navigation-case>
               </navigation-rule>
+              
+              <navigation-rule>
+                  <from-view-id>/reject.jsp</from-view-id>
+                  <navigation-case>
+                      <from-outcome>reject</from-outcome>
+                      <to-view-id>/inbox.jsp</to-view-id>
+                  </navigation-case>
+                  <navigation-case>
+                      <from-outcome>cancel</from-outcome>
+                      <to-view-id>/inbox.jsp</to-view-id>
+                  </navigation-case>
+              </navigation-rule>
+              
+              <navigation-rule>
+                  <from-view-id>/create.jsp</from-view-id>
+                  <navigation-case>
+                      <from-outcome>save</from-outcome>
+                      <to-view-id>/inbox.jsp</to-view-id>
+                  </navigation-case>
+                  <navigation-case>
+                      <from-outcome>cancel</from-outcome>
+                      <to-view-id>/inbox.jsp</to-view-id>
+                  </navigation-case>
+                  
+              </navigation-rule>
 </faces-config>
