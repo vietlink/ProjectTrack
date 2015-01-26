@@ -7,7 +7,7 @@
                   <from-view-id>/login.jsp</from-view-id>
                   <navigation-case>
                       <from-outcome>success</from-outcome>
-                      <to-view-id>/inbox.jsp</to-view-id>
+                      <to-view-id>protected/inbox.jsp</to-view-id>
                   </navigation-case>
                   <navigation-case>
                       <from-outcome>failure</from-outcome>
@@ -19,15 +19,15 @@
                   <from-view-id>/*</from-view-id>
                   <navigation-case>
                       <from-outcome>inbox</from-outcome>
-                      <to-view-id>/inbox.jsp</to-view-id>
+                      <to-view-id>protected/inbox.jsp</to-view-id>
                   </navigation-case>
                   <navigation-case>
                       <from-outcome>show_all</from-outcome>
-                      <to-view-id>/show_all.jsp</to-view-id>
+                      <to-view-id>general/show_all.jsp</to-view-id>
                   </navigation-case>
                   <navigation-case>
                       <from-outcome>create</from-outcome>
-                      <to-view-id>/create.jsp</to-view-id>
+                      <to-view-id>protected/edit/create.jsp</to-view-id>
                   </navigation-case>
                   <navigation-case>
                       <from-outcome>logout</from-outcome>
@@ -35,50 +35,50 @@
                   </navigation-case>
               </navigation-rule>
               <navigation-rule>
-                  <from-view-id>/inbox.jsp</from-view-id>
+                  <from-view-id>protected/inbox.jsp</from-view-id>
                   <navigation-case>
                       <from-outcome>details</from-outcome>
-                      <to-view-id>/detail.jsp</to-view-id>
+                      <to-view-id>general/detail.jsp</to-view-id>
                   </navigation-case>
                   <navigation-case>
                       <from-outcome>approve</from-outcome>
-                      <to-view-id>/approve.jsp</to-view-id>
+                      <to-view-id>protected/approve.jsp</to-view-id>
                   </navigation-case>
                   <navigation-case>
                       <from-outcome>reject</from-outcome>
-                      <to-view-id>/reject.jsp</to-view-id>
+                      <to-view-id>protected/reject.jsp</to-view-id>
                   </navigation-case>
                   
               </navigation-rule>
               <navigation-rule>
-                  <from-view-id>/show_all.jsp</from-view-id>
+                  <from-view-id>general/show_all.jsp</from-view-id>
                   <navigation-case>
                       <from-outcome>details</from-outcome>
-                      <to-view-id>/details.jsp</to-view-id>
+                      <to-view-id>general/details.jsp</to-view-id>
                   </navigation-case>
               </navigation-rule>
               
               <navigation-rule>
-                  <from-view-id>/reject.jsp</from-view-id>
+                  <from-view-id>protected/reject.jsp</from-view-id>
                   <navigation-case>
                       <from-outcome>reject</from-outcome>
-                      <to-view-id>/inbox.jsp</to-view-id>
+                      <to-view-id>protected/inbox.jsp</to-view-id>
                   </navigation-case>
                   <navigation-case>
                       <from-outcome>cancel</from-outcome>
-                      <to-view-id>/inbox.jsp</to-view-id>
+                      <to-view-id>protected/inbox.jsp</to-view-id>
                   </navigation-case>
               </navigation-rule>
               
               <navigation-rule>
-                  <from-view-id>/create.jsp</from-view-id>
+                  <from-view-id>protected/edit/create.jsp</from-view-id>
                   <navigation-case>
                       <from-outcome>save</from-outcome>
-                      <to-view-id>/inbox.jsp</to-view-id>
+                      <to-view-id>protected/inbox.jsp</to-view-id>
                   </navigation-case>
                   <navigation-case>
                       <from-outcome>cancel</from-outcome>
-                      <to-view-id>/inbox.jsp</to-view-id>
+                      <to-view-id>protected/inbox.jsp</to-view-id>
                   </navigation-case>
                   
               </navigation-rule>
