@@ -22,6 +22,7 @@ prefix="h"%>
               href="stylesheet/stylesheet.css"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title><h:outputText value="Project Track"/></title>
+        <link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/stylsheet/stylesheet.css"/>
     </head>
     <h:form>
     <body>
@@ -33,26 +34,30 @@ prefix="h"%>
                 <f:facet name="header">
                     <h:outputText value="Project Track"/>
                 </f:facet>
-                
+                <h:messages globalOnly="true"styleClass="errors"/>
+                <h:panelGroup/>
+                <h:panelGroup />
                 <h:outputLabel for="userNameInput">
                     <h:outputText value="Enter your username:"/>
                 </h:outputLabel>
                 
-                <h:inputText id="userNameInput" size="20" maxlength="30" required="true">
+                <h:inputText id="userNameInput" size="20" maxlength="30" required="true"
+                             value="#{authenticationBean.loginName}">
                     <f:validateLength minimum="5" maximum="30"/>
                 </h:inputText>
                 <h:message for="userNameInput" styleClass="error"/>
                 <h:outputLabel for="passwordInput">
                     <h:outputText value="Enter your password:"/>
                 </h:outputLabel>
-                <h:inputSecret id="passwordInput" size="20" maxlength="30" required="true">
+                <h:inputSecret id="passwordInput" size="20" maxlength="30" required="true"
+                               value="#{authenticationBean.password}">
                     <f:validateLength minimum="5" maximum="15"/>
                 </h:inputSecret>
                 <h:message for="passwordInput" styleClass="error"/>
             
             <h:panelGroup/>
             
-            <h:commandButton action="success" 
+            <h:commandButton action="#{authenticationBean.login}" 
                              title="Submit" image="images/Submit.gif"
                              onmouseover="set_image(this, 'images/submit_over.gif');"
                              onmouseout="set_image(this, 'images/Submit.gif');"/>
