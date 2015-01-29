@@ -7,23 +7,38 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsf/core" prefix="f"%>
 <%@ taglib uri="http://java.sun.com/jsf/html" prefix="h"%>
+<%@taglib uri="jsf-in-action-components" prefix="jia" %>
 <!DOCTYPE html>
 <html>
-    <!--
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    
-    <body>
-        <h1>Hello World!</h1>
-    </body>
-    -->
     <f:subview id="header">
         <h:form>
             <h:panelGrid columns="3" cellpadding="0" cellspacing="0"
                          styleClass="header" width="100%">
-                <h:panelGrid id="header" columns="9" cellpadding="4" cellspacing="4"
+                <jia:navigatorToolbar id="header"
+                                      layout="horizontal"
+                                      headerClass="header-header"
+                                      itemClass="header-command"
+                                      selectedItemClass="headr-command"
+                                      iconClass="header-icon"
+                                      immediate="false">
+                    <f:facet name="header">
+                        <h:outputText value="Project track:"/>
+                    </f:facet>
+                    <jia:navigatorItem name="inbox" label="Inbox"
+                                       icon="images/inbox.gif"
+                                       action="inbox"/>
+                    <jia:navigatorItem name="showAll" label="Show all"
+                                       icon="images/show_all.gif"
+                                       action="show_all"/>
+                    <jia:navigatorItem name="createNew" label="Create new"
+                                       icon="images/create_new.gif"
+                                       action="create_new"/>
+                    <jia:navigatorItem name="logout" label="Log out"
+                                       icon="images/logout.gif"
+                                       action="logout"/>
+                </jia:navigatorToolbar>
+               
+               <%-- <h:panelGrid id="header" columns="9" cellpadding="4" cellspacing="4"
                              border="0">
                     <h:outputText value="Project Track" styleClass="header-header"/>
                     <h:commandLink action="inbox">
@@ -46,7 +61,7 @@
                                         alt="Logout"/>
                         <h:outputText value="Logout" styleClass="header-command"/>
                     </h:commandLink>
-                </h:panelGrid>
+                </h:panelGrid>--%>
                 <h:panelGroup>
                     <h:outputLabel for="languageSelect">
                         <h:outputText value="Language:" styleClass="language-select"/>
