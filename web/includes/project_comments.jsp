@@ -4,14 +4,13 @@
     Author     : NgoVietLinh
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
-</html>
+<h:panelGrid columns="1" cellpadding="5"
+             styleClass="table-background"
+             rowClasses="table-odd-row,table-even-row">
+  <h:outputLabel for="commentsInput">
+    <h:outputText value="Your comments:"/>
+  </h:outputLabel>
+  <h:inputTextarea id="commentsInput" rows="10" cols="80"
+                   value="#{updateProjectBean.comments}"/>
+</h:panelGrid>
+

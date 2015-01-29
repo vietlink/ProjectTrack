@@ -4,14 +4,26 @@
     Author     : NgoVietLinh
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
-</html>
+<h:outputText value="Name:"/>
+<h:outputText value="#{visit.currentProject.name}"
+              styleClass="project-data"/>         <!>
+
+<h:outputText value="Type:"/>
+<h:outputText value="#{visit.currentProject.type}"
+              styleClass="project-data"/>   <!>
+
+<h:outputText value="Initiated by:"/>
+<h:outputText value="#{visit.currentProject.initiatedBy}"
+              styleClass="project-data"/>    <!>
+
+<h:outputText value="Requirements contact:"/>
+<h:outputText value="#{visit.currentProject.requirementsContact}"
+              styleClass="project-data"/>    <!>
+
+<h:outputText value="Requirements contact e-mail:"/>
+<h:outputText value="#{visit.currentProject.requirementsContactEmail}"
+              styleClass="project-data"/>    <!>
+
+<h:outputText value="Initial comments:"/>
+<h:outputText value="#{visit.currentProject.initialComments}"
+              styleClass="project-data"/>    <!>

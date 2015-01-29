@@ -26,16 +26,18 @@
                     </f:facet>
                     <jia:navigatorItem name="inbox" label="Inbox"
                                        icon="images/inbox.gif"
-                                       action="inbox"/>
+                                       action="inbox"
+                                       disabled="#{!authenticationBean.inboxAuthorized}"/>
                     <jia:navigatorItem name="showAll" label="Show all"
                                        icon="images/show_all.gif"
                                        action="show_all"/>
                     <jia:navigatorItem name="createNew" label="Create new"
                                        icon="images/create_new.gif"
-                                       action="create_new"/>
+                                       action="#{createProjectBean.create}"
+                                       disabled="#{!authenticationBean.createNewAuthorized}"/>
                     <jia:navigatorItem name="logout" label="Log out"
                                        icon="images/logout.gif"
-                                       action="logout"/>
+                                       action="#{authenticationBean.logout}"/>
                 </jia:navigatorToolbar>
                
                <%-- <h:panelGrid id="header" columns="9" cellpadding="4" cellspacing="4"
@@ -67,14 +69,13 @@
                         <h:outputText value="Language:" styleClass="language-select"/>
                     </h:outputLabel>
                     <h:selectOneListbox id="languageSelect"
-                                        size="1" styleClass="language-select">
-                        <f:selectItem itemLabel="English" itemValue="English"/>
-                        <f:selectItem itemLabel="Russian" itemValue="Russian"/>
+                                        size="1" styleClass="language-select" value="#{visit.locale}">
+                        <f:selectItem value="#{visit.supportLocaleItems}"/>
                     </h:selectOneListbox>
                     <h:commandButton value="Go!"
                                      styleClass="language-select-button"/>
                 </h:panelGroup>
-                <h:outputText value="proj_mgr" styleClass="user-name"/>
+                <h:outputText value="#{visit.user.login}" styleClass="user-name"/>
             </h:panelGrid>
         </h:form>
     </f:subview>

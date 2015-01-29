@@ -19,18 +19,20 @@
                   <from-view-id>/*</from-view-id>
                   <navigation-case>
                       <from-outcome>inbox</from-outcome>
-                      <to-view-id>protected/inbox.jsp</to-view-id>
+                      <to-view-id>/protected/inbox.jsp</to-view-id>
                   </navigation-case>
                   <navigation-case>
                       <from-outcome>show_all</from-outcome>
-                      <to-view-id>general/show_all.jsp</to-view-id>
+                      <to-view-id>/general/show_all.jsp</to-view-id>
                   </navigation-case>
                   <navigation-case>
-                      <from-outcome>create</from-outcome>
-                      <to-view-id>protected/edit/create.jsp</to-view-id>
+                      <from-action>#{createProjectBean.create}</from-action>
+                      <from-outcome>success</from-outcome>
+                      <to-view-id>/protected/edit/create.jsp</to-view-id>
                   </navigation-case>
                   <navigation-case>
-                      <from-outcome>logout</from-outcome>
+                      <from-action>#{authenticationBean.logout}</from-action>
+                      <from-outcome>success</from-outcome>
                       <to-view-id>/login.jsp</to-view-id>
                   </navigation-case>
               </navigation-rule>

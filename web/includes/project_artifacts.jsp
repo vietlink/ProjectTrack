@@ -3,15 +3,12 @@
     Created on : Jan 2, 2015, 10:46:25 PM
     Author     : NgoVietLinh
 --%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
-</html>
+<h:outputLabel for="artifactSelect">
+  <h:outputText value="Completed artifacts:"/>
+</h:outputLabel>
+<h:selectManyCheckbox id="artifactSelect" layout="pageDirection"
+                      styleClass="project-input"
+                      value="#{visit.currentProject.artifacts}"
+                      converter="ArtifactType">
+  <f:selectItems value="#{selectItems.artifacts}"/>
+</h:selectManyCheckbox>
